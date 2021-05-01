@@ -1,20 +1,46 @@
 .searchbar-root {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: center;
-   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 400px;
+  width: 100%;
 }
 
+.searchbar-container {
+  position: relative;
+  margin: 2em auto;
+  width: 100%;
+}
 
 .searchbar-container input {
-    margin-top: 20px;
-    width: 300px;
-    height: 40px;
-    font-size: calc(10px + 2vmin);
-    padding:10px;
+  height: 40px;
+  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  margin: 0px;
+  width: calc(100% - 24px);
 }
 
-.citytext {
-    color: black;
+.cityList {
+  background: #FFF;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+}
+
+.hideCityList {
+  display: none;
+}
+
+.cityText {
+  color: black;
+  list-style-type: none;
+  padding: 0.7em 0px;
+}
+
+.cityText:hover {
+  background: #403923;
+  color: #FFF;
 }

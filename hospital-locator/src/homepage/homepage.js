@@ -8,7 +8,6 @@ function HomePage() {
     <div className="homepage-root">
       <SearchBar />
       <HospitalList />
-      <p className="homepage-text">Hello world</p>
     </div>
   );
 }
