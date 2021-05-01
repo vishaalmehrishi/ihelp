@@ -1,19 +1,14 @@
-import SearchBar from '../SearchBar/SearchBar';
-import './HomePage.css';
-import '../SearchBar/SearchBar';
+import SearchBar from "../SearchBar/SearchBar";
+import "./homepage.css";
+import "../SearchBar/SearchBar";
 import { HospitalList } from "../hospitalList/HospitalList";
 
 function HomePage() {
   return (
     <div className="homepage-root">
-     
-      <header className="homepage-header">
-        <SearchBar />
-         <HospitalList />
-        <p className="homepage-text">
-          Hello world
-        </p>
-      </header>
+      <SearchBar />
+      <HospitalList />
+      <p className="homepage-text">Hello world</p>
     </div>
   );
 }
