@@ -31,6 +31,7 @@ const SearchBar = () => {
       }
       return "";
     })
+    .sort((a, b) => a.name.localeCompare(b.name))
     .map((city, key) => renderCity(city, key));
   return (
     <div className="searchbar-root">

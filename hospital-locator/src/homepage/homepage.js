@@ -1,8 +1,8 @@
 import SearchBar from "../SearchBar/SearchBar";
-import "./HomePage.css";
+import "./homepage.css";
 import "../SearchBar/SearchBar";
 import { HospitalList } from "../HospitalList/HospitalList";
-import { LocationWidget } from '../location/LocationWidget';
+import { LocationWidget } from "../location/LocationWidget";
 
 function HomePage() {
   return (
