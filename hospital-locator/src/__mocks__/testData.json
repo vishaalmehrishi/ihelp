@@ -1,0 +1,92 @@
+[
+  {
+    "name": "DH Agar Malwa - DCHC/जिला चिकित्सालय, आगर मालवा - डीसीएचसी ",
+    "type": "PUGOVERNMENT",
+    "total_beds": 150,
+    "available_beds": 0,
+    "lat": "23.7103480",
+    "lon": "76.0101780",
+    "isolation_beds": 0,
+    "oxygen_supported": 0,
+    "reserved_icu_hdu": 0,
+    "rates_info": "FREE",
+    "last_updated": "2021-05-01T08:03:07+05:30",
+    "contact": [
+      {
+        "phone": "9425985071"
+      },
+      {
+        "phone": "9425429051"
+      },
+      {
+        "phone": "7879466266"
+      }
+    ]
+  },
+  {
+    "name": "Pichda warg Boys Post matric Hostel Malikhedi road Agar Malwa/पिछड़ा वर्ग बॉयज पोस्ट मैट्रिक हॉस्टल मालीखेड़ी रोड, आगर मालवा ",
+    "type": "PUGOVERNMENT",
+    "total_beds": 186,
+    "available_beds": 178,
+    "lat": "23.7185370",
+    "lon": "76.0004910",
+    "isolation_beds": 178,
+    "oxygen_supported": 0,
+    "reserved_icu_hdu": 0,
+    "rates_info": "FREE",
+    "last_updated": "2021-05-01T08:02:13+05:30",
+    "contact": [
+      {
+        "phone": "9644190018"
+      },
+      {
+        "phone": "7223007898"
+      },
+      {
+        "phone": "9644190018"
+      }
+    ]
+  },
+  {
+    "name": "BOYS Hostel, Alirajpur/ब्वॉयज हॉस्टल, अलीराजपुर ",
+    "type": "PUGOVERNMENT",
+    "total_beds": 160,
+    "available_beds": 87,
+    "lat": "22.3189280",
+    "lon": "74.3578320",
+    "isolation_beds": 87,
+    "oxygen_supported": 0,
+    "reserved_icu_hdu": 0,
+    "rates_info": "FREE",
+    "last_updated": "2021-05-01T09:35:12+05:30",
+    "contact": [
+      {
+        "phone": "7805057576"
+      },
+      {
+        "phone": "7566646088"
+      },
+      {
+        "phone": "7566027179"
+      }
+    ]
+  },
+  {
+    "name": "CCC JOBAT/सीसीसी जोबट ",
+    "type": "PUGOVERNMENT",
+    "total_beds": 100,
+    "available_beds": 39,
+    "lat": "22.4172574",
+    "lon": "74.5480857",
+    "isolation_beds": 39,
+    "oxygen_supported": 0,
+    "reserved_icu_hdu": 0,
+    "rates_info": "FREE",
+    "last_updated": "2021-05-01T09:36:02+05:30",
+    "contact": [
+      {
+        "phone": "7247694474"
+      }
+    ]
+  }
+]
