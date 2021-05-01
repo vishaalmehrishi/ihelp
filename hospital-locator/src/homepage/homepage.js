@@ -1,7 +1,7 @@
 import SearchBar from "../SearchBar/SearchBar";
-import "./HomePage.css";
+import "./homepage.css";
 import "../SearchBar/SearchBar";
-import { HospitalList } from "../HospitalList/HospitalList";
+import { HospitalList } from "../hospitalList/HospitalList";
 
 function HomePage() {
   return (
