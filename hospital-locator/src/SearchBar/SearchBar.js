@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import cityList from "./cities.json";
+import cityList from "../__mocks__/cities.json";
 
 const SearchBar = () => {
   const [searchCity, updateSearchCity] = useState("");
@@ -29,6 +29,7 @@ const SearchBar = () => {
       } else if (city.name.toLowerCase().includes(searchCity.toLowerCase())) {
         return city;
       }
+      return "";
     })
     .map((city, key) => renderCity(city, key));
   return (
