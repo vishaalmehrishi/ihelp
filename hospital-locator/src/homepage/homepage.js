@@ -1,5 +1,5 @@
 import SearchBar from "../SearchBar/SearchBar";
-import "./homepage.css";
+import "./HomePage.css";
 import "../SearchBar/SearchBar";
 import { HospitalList } from "../HospitalList/HospitalList";
 import { LocationWidget } from "../location/LocationWidget";
