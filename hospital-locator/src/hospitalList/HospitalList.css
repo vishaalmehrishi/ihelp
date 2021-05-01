@@ -35,6 +35,24 @@
   justify-content: center;
 }
 
+
 .hospitalBeds p {
+  margin: 0px;
+}
+
+
+.hospitalDistanceIcon {
+  width: 3em;
+}
+
+.hospitalDistance {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.hospitalDistance p {
   margin: 0px;
 }

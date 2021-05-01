@@ -1,6 +1,9 @@
 import "./HospitalList.css";
 import testData from "../__mocks__/testData.json";
-import { FaBed } from "react-icons/fa";
+import { FaBed} from "react-icons/fa";
+import { RiPinDistanceLine } from "react-icons/ri";
+import { render } from "@testing-library/react";
+
 
 const HospitalList = ({ hospitals }) => {
   // TODO: Faking hospital data to show list
@@ -11,6 +14,22 @@ const HospitalList = ({ hospitals }) => {
 
   return <ul className="hospitalList">{hospitalArr}</ul>;
 };
+
+const renderHospitalDistance = (hospital) => {
+  //figure out distance based on lat, long and current lat, long
+  return (
+    <div className="hospitalDistance">
+      <RiPinDistanceLine className="hospitalDistanceIcon" 
+          aria-labelledby="Distance to hospital" 
+      />
+      <p key={`${hospital.name}-distance`}>
+        5
+      </p>
+    </div>
+
+  );
+
+}
 
 const HospitalListItem = ({ hospital }) => {
   /* From data scrape, expect hospital to contain
@@ -23,20 +42,25 @@ const HospitalListItem = ({ hospital }) => {
       </p>
     );
   });
+
+  
   return (
     <li className="hospitalListItem">
-      <div className="hospitalInfo">
-        <h2>{hospital.name}</h2>
-        <p>Distance From user</p>
-        {contactArr}
-      </div>
-      <div className="hospitalBeds">
-        <FaBed
-          className="hospitalBedIcon"
-          aria-labelledby="Number of available hospital beds"
-        />
-        <p>{hospital["available_beds"]}</p>
-      </div>
+        <div className="hospitalInfo">
+          <h2>{hospital.name}</h2>
+          <p>Distance From user</p>
+          {contactArr}
+        </div>
+        
+       {renderHospitalDistance(hospital)}
+       
+        <div className="hospitalBeds">
+          <FaBed
+            className="hospitalBedIcon"
+            aria-labelledby="Number of available hospital beds"
+          />
+          <p>{hospital["available_beds"]}</p>
+        </div>
     </li>
   );
 };
