@@ -2,7 +2,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import "./HomePage.css";
 import "../SearchBar/SearchBar";
 import { HospitalList } from "../HospitalList/HospitalList";
-import { LocationWidget } from "../location/LocationWidget";
+import { LocationWidget } from "../Location/LocationWidget";
 
 function HomePage() {
   return (
