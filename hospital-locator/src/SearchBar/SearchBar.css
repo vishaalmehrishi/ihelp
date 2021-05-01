@@ -1,0 +1,20 @@
+.searchbar-root {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.searchbar-container input {
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: calc(10px + 2vmin);
+    padding:10px;
+}
+
+.citytext {
+    color: black;
+}

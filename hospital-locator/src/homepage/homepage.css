@@ -1,9 +1,13 @@
-.root {
+.homepage-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
   
   .homepage-logo {
-    height: 40vmin;
+    height: 50vmin;
     pointer-events: none;
   }
   
@@ -13,18 +17,22 @@
     }
   }
   
+  .homepage-text {
+    color: black;
+    width: 100%;
+  }
+  
   .homepage-header {
-    background-color: #282c34;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+    background-color: #eceef2;
+    font-size: calc(10px + 5vmin);
     color: white;
   }
   
-  .homepage-link {
+  .App-link {
     color: #61dafb;
   }
   

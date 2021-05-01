@@ -1,11 +1,19 @@
-import "./homepage.css";
+import SearchBar from '../SearchBar/SearchBar';
+import './HomePage.css';
+import '../SearchBar/SearchBar';
 import { HospitalList } from "../hospitalList/HospitalList";
 
 function HomePage() {
   return (
-    <div className="root">
-      {/* Expect that Hospital List will take in a list of hospitals */}
-      <HospitalList />
+    <div className="homepage-root">
+     
+      <header className="homepage-header">
+        <SearchBar />
+         <HospitalList />
+        <p className="homepage-text">
+          Hello world
+        </p>
+      </header>
     </div>
   );
 }
