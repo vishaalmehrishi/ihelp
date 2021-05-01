@@ -5,23 +5,12 @@
     align-items: center;
     text-align: center;
   }
-  
-  .homepage-logo {
-    height: 50vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .homepage-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-  
+
   .homepage-text {
     color: black;
     width: 100%;
   }
-  
+
   .homepage-header {
     display: flex;
     flex-direction: column;
@@ -31,17 +20,7 @@
     font-size: calc(10px + 5vmin);
     color: white;
   }
-  
+
   .App-link {
     color: #61dafb;
   }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  

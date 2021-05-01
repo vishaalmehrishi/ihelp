@@ -9,8 +9,9 @@
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   display: flex;
+  justify-content: space-between;
   list-style-type: none;
-  padding: 1rem 0px;
+  padding: 1rem;
 }
 
 .hospitalInfo {
@@ -30,6 +31,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 1.4rem;
+  font-size: 3rem;
   justify-content: center;
+}
+
+.hospitalBeds p {
+  margin: 0px;
 }

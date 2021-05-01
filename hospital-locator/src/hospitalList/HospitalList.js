@@ -3,10 +3,9 @@ import testData from "../__mocks__/testData.json";
 import { FaBed } from "react-icons/fa";
 
 const HospitalList = ({ hospitals }) => {
-  // Faking hospital data to show list
+  // TODO: Faking hospital data to show list
   // Would probably be more performant to recieve sorted data from the backend?
   const hospitalArr = testData.map((hospital, i) => {
-    console.log(i);
     return <HospitalListItem key={`hospital-${i}`} hospital={hospital} />;
   });
 
