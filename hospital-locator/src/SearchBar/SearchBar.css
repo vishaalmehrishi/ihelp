@@ -4,12 +4,13 @@
   align-items: center;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 400px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .searchbar-container {
   position: relative;
-  margin-top: 2em auto;
+  /* /margin-top: 0em auto; */
   width: 100%;
 }
 

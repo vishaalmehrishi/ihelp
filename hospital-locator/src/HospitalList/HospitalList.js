@@ -44,6 +44,7 @@ const HospitalList = ({ hospitals, limit = 10 }) => {
       }
       /* Sorting by available beds and distance
         where available beds is more important
+        TODO: Unsure that this is working as intended
       */
       return b["available_beds"] === a["available_beds"]
         ? distanceA - distanceB
