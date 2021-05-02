@@ -1,5 +1,5 @@
 import React from 'react'
-import { usePermission, useLocation, useLocationName } from './Location'
+import { usePermission, useLocation, getCityFromCoordinates } from './Location'
 import { RiUserLocationLine } from 'react-icons/ri'
 import './LocationWidget.css'
 
@@ -26,15 +26,23 @@ const useLoadingText = () => {
 const LocationWidget = () => {
     const [locationAccess] = usePermission('geolocation')
     const [location, locationError] = useLocation()
-    const name = useLocationName(location)
     const loadingText = useLoadingText()
+    const [cityName, setCityName] = React.useState()
+
+    React.useEffect(() => {
+        if (!location) {
+            return
+        }
+        getCityFromCoordinates(`${location.latitude},${location.longitude}`)
+        .then(newCityName => setCityName(`Searching near ${newCityName}`))
+    }, [location])
 
     const locationFailed = () => locationAccess === 'denined' || locationError
 
     const getText = () => {
         return locationFailed() ? 'Unable to determine location. Tap here to retry...'
             : !location ? loadingText
-            : name
+            : cityName
     }
 
     const requestLocation = () => {
