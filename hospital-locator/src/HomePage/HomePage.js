@@ -8,8 +8,8 @@ import testData from "../__mocks__/testData.json";
 function HomePage() {
   return (
     <div className="homepage-root">
-      <Header /> 
-      <SearchBar />
+      <Header />
+      <SearchBar /> 
       <HospitalList hospitals={testData} />
     </div>
   );

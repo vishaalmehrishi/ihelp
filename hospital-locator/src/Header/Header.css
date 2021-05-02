@@ -1,16 +1,20 @@
 .header-root {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content:space-between;
-    align-items: baseline;
-    padding: 1em;
-    margin-bottom: 1em;
-    background-color: rgb(156, 214, 247);
-    padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #c7d9fa;
+        color: rgb(41, 40, 40);
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        height: 10vh;
   }
 
 .header-root p {
+    font-weight: 400;
+    font-size: 2vw;
+}
+.header-root h1 {
     font-weight: 600;
-    text-align: left;
+    font-size: 3vh;
 }
