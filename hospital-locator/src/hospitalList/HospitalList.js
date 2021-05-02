@@ -1,35 +1,35 @@
-import { useState, useEffect } from "react";
 import "./HospitalList.css";
-import { useLocation } from "../location/Location";
-import straightDistanceInKm from "../utils/getDistance";
-import { FaBed } from "react-icons/fa";
+import testData from "../__mocks__/testData.json";
+import { FaBed} from "react-icons/fa";
+import { RiPinDistanceLine } from "react-icons/ri";
+import { render } from "@testing-library/react";
+
 
 const HospitalList = ({ hospitals }) => {
   // TODO: Faking hospital data to show list
   // Would probably be more performant to recieve sorted data from the backend?
-  const [location] = useLocation();
-  const [userLocation, updateUserLocation] = useState();
-
-  useEffect(() => {
-    updateUserLocation(location);
-  }, [location]);
-
-  const hospitalArr = hospitals
-    .sort((a, b) => {
-      const distanceA = straightDistanceInKm(
-        a.lat,
-        a.lon,
-        userLocation?.latitude,
-        userLocation?.longitude
-      );
-      return a > b;
-    })
-    .map((hospital, i) => {
-      return <HospitalListItem key={`hospital-${i}`} hospital={hospital} />;
-    });
+  const hospitalArr = testData.map((hospital, i) => {
+    return <HospitalListItem key={`hospital-${i}`} hospital={hospital} />;
+  });
 
   return <ul className="hospitalList">{hospitalArr}</ul>;
 };
+
+const renderHospitalDistance = (hospital) => {
+  //figure out distance based on lat, long and current lat, long
+  return (
+    <div className="hospitalDistance">
+      <RiPinDistanceLine className="hospitalDistanceIcon" 
+          aria-labelledby="Distance to hospital" 
+      />
+      <p key={`${hospital.name}-distance`}>
+        5
+      </p>
+    </div>
+
+  );
+
+}
 
 const HospitalListItem = ({ hospital }) => {
   /* From data scrape, expect hospital to contain
@@ -42,20 +42,25 @@ const HospitalListItem = ({ hospital }) => {
       </p>
     );
   });
+
+  
   return (
     <li className="hospitalListItem">
-      <div className="hospitalInfo">
-        <h2>{hospital.name}</h2>
-        <p>Distance From user</p>
-        {contactArr}
-      </div>
-      <div className="hospitalBeds">
-        <FaBed
-          className="hospitalBedIcon"
-          aria-labelledby="Number of available hospital beds"
-        />
-        <p>{hospital["available_beds"]}</p>
-      </div>
+        <div className="hospitalInfo">
+          <h2>{hospital.name}</h2>
+          <p>Distance From user</p>
+          {contactArr}
+        </div>
+        
+       {renderHospitalDistance(hospital)}
+       
+        <div className="hospitalBeds">
+          <FaBed
+            className="hospitalBedIcon"
+            aria-labelledby="Number of available hospital beds"
+          />
+          <p>{hospital["available_beds"]}</p>
+        </div>
     </li>
   );
 };
