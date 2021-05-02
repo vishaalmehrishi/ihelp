@@ -1,7 +1,7 @@
 .hospitalList {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0px;
+  width: 100%;
+  justify-content: center;
+  padding: 1em;
 }
 
 .hospitalListItem {
