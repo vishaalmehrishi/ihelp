@@ -29,14 +29,14 @@ const HospitalList = ({ hospitals, limit }) => {
       let distanceA, distanceB;
       if (userLocation) {
         distanceA = distanceInKm(
-          a.lat,
-          a.lon,
+          a.geometry.coordinates[0],
+          a.geometry.coordinates[1],
           userLocation.latitude,
           userLocation.longitude
         );
         distanceB = distanceInKm(
-          b.lat,
-          b.lon,
+          b.geometry.coordinates[0],
+          b.geometry.coordinates[1],
           userLocation.latitude,
           userLocation.longitude
         );
@@ -46,15 +46,15 @@ const HospitalList = ({ hospitals, limit }) => {
         where available beds is more important
       */
       return b["available_beds"] === a["available_beds"]
-        ? distanceB - distanceA
+        ? distanceA - distanceB
         : b["available_beds"] - a["available_beds"];
     })
     .map((hospital, i) => {
       const hospitalDistance = distanceInKm(
-        hospital.lat,
-        hospital.lon,
-        userLocation.latitude,
-        userLocation.longitude
+        hospital.geometry.coordinates[0],
+        hospital.geometry.coordinates[1],
+        userLocation?.latitude,
+        userLocation?.longitude
       );
       return (
         <HospitalListItem
@@ -64,7 +64,7 @@ const HospitalList = ({ hospitals, limit }) => {
         />
       );
     });
-
+  // TODO: Improve performance?
   return userLocation ? (
     <ul className="hospitalList">{hospitalArr}</ul>
   ) : (
@@ -80,28 +80,22 @@ const renderHospitalDistance = (hospital, distance) => {
         className="hospitalDistanceIcon"
         aria-labelledby="Distance to hospital"
       />
-      <p key={`${hospital.name}-distance`}>{distance}</p>
+      <p key={`${hospital.properties.name_english}-distance`}>{distance}</p>
     </div>
   );
 };
 
 const HospitalListItem = ({ hospital, distanceInKm }) => {
   /* From data scrape, expect hospital to contain
-    name, lat, lon, type, total_beds, available_beds, rates_info, contact(arr)
+    name, lat, lon, type, total_beds, available_beds, rates_info,
   */
-  const contactArr = hospital.contact.map((contactMethod, i, hospital) => {
-    return (
-      <p key={`${hospital.name}-contactMethod-${i}`}>
-        Phone: {contactMethod.phone}
-      </p>
-    );
-  });
 
   return (
     <li className="hospitalListItem">
       <div className="hospitalInfo">
-        <h2>{hospital.name}</h2>
-        {contactArr}
+        {/* TODO: Update on language change? */}
+        <h2>{hospital.properties.name_english}</h2>
+        <p>{hospital.properties.district}</p>
       </div>
 
       {renderHospitalDistance(hospital, distanceInKm)}
@@ -111,7 +105,7 @@ const HospitalListItem = ({ hospital, distanceInKm }) => {
           className="hospitalBedIcon"
           aria-labelledby="Number of available hospital beds"
         />
-        <p>{hospital["available_beds"]}</p>
+        <p>{hospital.properties["available_beds"]}</p>
       </div>
     </li>
   );
