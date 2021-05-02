@@ -5,7 +5,7 @@ import { RiPinDistanceLine } from "react-icons/ri";
 import { useLocation } from "../Location/Location";
 import straightDistanceInKm from "../utils/getDistance";
 
-const HospitalList = ({ hospitals, limit }) => {
+const HospitalList = ({ hospitals, limit = 10 }) => {
   // TODO: Faking hospital data to show list
   // Would probably be more performant to recieve sorted data from the backend?
   const [location] = useLocation();
@@ -63,7 +63,8 @@ const HospitalList = ({ hospitals, limit }) => {
           distanceInKm={hospitalDistance.toFixed(2)}
         />
       );
-    });
+    })
+    .slice(0, limit);
   // TODO: Improve performance?
   return userLocation ? (
     <ul className="hospitalList">{hospitalArr}</ul>
