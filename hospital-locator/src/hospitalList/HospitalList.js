@@ -1,13 +1,32 @@
+import { useState, useEffect } from "react";
 import "./HospitalList.css";
-import testData from "../__mocks__/testData.json";
+import { useLocation } from "../location/Location";
+import straightDistanceInKm from "../utils/getDistance";
 import { FaBed } from "react-icons/fa";
 
 const HospitalList = ({ hospitals }) => {
   // TODO: Faking hospital data to show list
   // Would probably be more performant to recieve sorted data from the backend?
-  const hospitalArr = testData.map((hospital, i) => {
-    return <HospitalListItem key={`hospital-${i}`} hospital={hospital} />;
-  });
+  const [location] = useLocation();
+  const [userLocation, updateUserLocation] = useState();
+
+  useEffect(() => {
+    updateUserLocation(location);
+  }, [location]);
+
+  const hospitalArr = hospitals
+    .sort((a, b) => {
+      const distanceA = straightDistanceInKm(
+        a.lat,
+        a.lon,
+        userLocation?.latitude,
+        userLocation?.longitude
+      );
+      return a > b;
+    })
+    .map((hospital, i) => {
+      return <HospitalListItem key={`hospital-${i}`} hospital={hospital} />;
+    });
 
   return <ul className="hospitalList">{hospitalArr}</ul>;
 };
