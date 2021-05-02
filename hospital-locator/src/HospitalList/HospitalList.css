@@ -9,6 +9,7 @@
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   list-style-type: none;
   padding: 1rem;
@@ -16,7 +17,13 @@
 
 .hospitalInfo {
   text-align: left;
-  width: 70%;
+  width: 100%;
+}
+
+@media screen and (min-width: 920px) {
+  .hospitalInfo {
+    width: 60%;
+  }
 }
 
 .hospitalInfo h2 {
@@ -24,14 +31,14 @@
 }
 
 .hospitalBedIcon {
-  width: 3em;
+  width: 2.5em;
 }
 
 .hospitalBeds {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 2.5rem;
   justify-content: center;
 }
 
@@ -42,14 +49,14 @@
 
 
 .hospitalDistanceIcon {
-  width: 3em;
+  width: 2.5em;
 }
 
 .hospitalDistance {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 2.5rem;
   justify-content: center;
 }
 
