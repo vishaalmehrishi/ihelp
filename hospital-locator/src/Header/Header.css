@@ -1,0 +1,16 @@
+.header-root {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: rgb(156, 214, 247);
+    padding: 10px;
+  }
+
+.header-root p {
+    font-weight: 600;
+    text-align: left;
+}
