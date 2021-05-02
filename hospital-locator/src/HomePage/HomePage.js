@@ -7,8 +7,10 @@ import { LocationWidget } from "../Location/LocationWidget";
 function HomePage() {
   return (
     <div className="homepage-root">
-      <SearchBar />
-      <LocationWidget />
+      <div className="homepage-header">
+        <SearchBar />
+        <LocationWidget />
+      </div>
       <HospitalList />
     </div>
   );

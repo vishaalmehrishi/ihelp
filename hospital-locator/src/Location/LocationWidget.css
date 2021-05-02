@@ -1,19 +1,24 @@
 .location-widget-root {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     max-width: 400px;
-    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 0px 0.8em;
 }
 
 .location-widget-text {
-    color: black;
-    padding: 0.7em 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
+    font-weight: bold;
+    min-width: 160px;
+    text-align: start;
 }
 
-.location-widget-retry {
-    display: flex;
+.location-widget-icon {
+    font-size: 1lh;
+    margin-right: 0.8em;
 }
