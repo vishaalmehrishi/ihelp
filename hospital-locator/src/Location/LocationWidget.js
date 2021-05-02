@@ -1,9 +1,32 @@
 import React from 'react'
 import { usePermission, useLocation, getCityFromCoordinates } from './Location'
+import { RiUserLocationLine } from 'react-icons/ri'
+import './LocationWidget.css'
+
+const useInterval = (callback, intervalMS, deps) => {
+    React.useEffect(() => {
+        let timer = setTimeout(() => callback(), intervalMS);
+        return () => {
+            clearTimeout(timer);
+        };
+    },[callback, intervalMS, deps]);
+}
+
+const useLoadingText = () => {
+    const [counter, setCounter] = React.useState(0)
+    const text = 'Determining Location.'
+
+    useInterval(() => {
+        setCounter(counter + 1)
+    }, 400, counter)
+
+    return text + '.'.repeat(counter % 3) 
+}
 
 const LocationWidget = () => {
     const [locationAccess] = usePermission('geolocation')
     const [location, locationError] = useLocation()
+    const loadingText = useLoadingText()
     const [cityName, setCityName] = React.useState()
 
     React.useEffect(() => {
@@ -18,7 +41,7 @@ const LocationWidget = () => {
 
     const getText = () => {
         return locationFailed() ? 'Unable to determine location. Tap here to retry...'
-            : !location ? 'Determining location...'
+            : !location ? loadingText
             : cityName
     }
 
@@ -31,6 +54,7 @@ const LocationWidget = () => {
 
     return (
         <div className="location-widget-root" onClick={requestLocation}>
+            <RiUserLocationLine className="location-widget-icon" aria-labelledby="Distance to hospital" />
             <p className="location-widget-text">
                 {getText()}
             </p>
