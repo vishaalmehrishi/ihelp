@@ -1,92 +1,491 @@
 [
   {
-    "name": "DH Agar Malwa - DCHC/जिला चिकित्सालय, आगर मालवा - डीसीएचसी ",
-    "type": "PUGOVERNMENT",
-    "total_beds": 150,
-    "available_beds": 0,
-    "lat": "23.7103480",
-    "lon": "76.0101780",
-    "isolation_beds": 0,
-    "oxygen_supported": 0,
-    "reserved_icu_hdu": 0,
-    "rates_info": "FREE",
-    "last_updated": "2021-05-01T08:03:07+05:30",
-    "contact": [
-      {
-        "phone": "9425985071"
-      },
-      {
-        "phone": "9425429051"
-      },
-      {
-        "phone": "7879466266"
-      }
-    ]
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        76.010178,
+        23.710348
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T18:33:59+05:30",
+      "name_english": "DH Agar Malwa - DCHC",
+      "name_hindi": "जिला चिकित्सालय, आगर मालवा - डीसीएचसी",
+      "total_beds": 150,
+      "available_beds": 0,
+      "isolation_beds": 0,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Agar Malwa"
+    }
   },
   {
-    "name": "Pichda warg Boys Post matric Hostel Malikhedi road Agar Malwa/पिछड़ा वर्ग बॉयज पोस्ट मैट्रिक हॉस्टल मालीखेड़ी रोड, आगर मालवा ",
-    "type": "PUGOVERNMENT",
-    "total_beds": 186,
-    "available_beds": 178,
-    "lat": "23.7185370",
-    "lon": "76.0004910",
-    "isolation_beds": 178,
-    "oxygen_supported": 0,
-    "reserved_icu_hdu": 0,
-    "rates_info": "FREE",
-    "last_updated": "2021-05-01T08:02:13+05:30",
-    "contact": [
-      {
-        "phone": "9644190018"
-      },
-      {
-        "phone": "7223007898"
-      },
-      {
-        "phone": "9644190018"
-      }
-    ]
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        76.000491,
+        23.718537
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:28:06+05:30",
+      "name_english": "Pichda warg Boys Post matric Hostel Malikhedi road Agar Malwa",
+      "name_hindi": "पिछड़ा वर्ग बॉयज पोस्ट मैट्रिक हॉस्टल मालीखेड़ी रोड, आगर मालवा",
+      "total_beds": 186,
+      "available_beds": 178,
+      "isolation_beds": 178,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Agar Malwa"
+    }
   },
   {
-    "name": "BOYS Hostel, Alirajpur/ब्वॉयज हॉस्टल, अलीराजपुर ",
-    "type": "PUGOVERNMENT",
-    "total_beds": 160,
-    "available_beds": 87,
-    "lat": "22.3189280",
-    "lon": "74.3578320",
-    "isolation_beds": 87,
-    "oxygen_supported": 0,
-    "reserved_icu_hdu": 0,
-    "rates_info": "FREE",
-    "last_updated": "2021-05-01T09:35:12+05:30",
-    "contact": [
-      {
-        "phone": "7805057576"
-      },
-      {
-        "phone": "7566646088"
-      },
-      {
-        "phone": "7566027179"
-      }
-    ]
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        74.355738,
+        22.3124
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:13:59+05:30",
+      "name_english": "DH Alirajpur - DCHC",
+      "name_hindi": "जिला चिकित्सालय, अलीराजपुर - डीसीएचसी",
+      "total_beds": 85,
+      "available_beds": 12,
+      "isolation_beds": 0,
+      "oxygen_supported": 2,
+      "reserved_icu_hdu": 10,
+      "access": "FREE",
+      "district": "Alirajpur"
+    }
   },
   {
-    "name": "CCC JOBAT/सीसीसी जोबट ",
-    "type": "PUGOVERNMENT",
-    "total_beds": 100,
-    "available_beds": 39,
-    "lat": "22.4172574",
-    "lon": "74.5480857",
-    "isolation_beds": 39,
-    "oxygen_supported": 0,
-    "reserved_icu_hdu": 0,
-    "rates_info": "FREE",
-    "last_updated": "2021-05-01T09:36:02+05:30",
-    "contact": [
-      {
-        "phone": "7247694474"
-      }
-    ]
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        74.3209677,
+        22.1803024
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:15:29+05:30",
+      "name_english": "Eklavya Hostel Umrali",
+      "name_hindi": "एकलव्‍य हॉस्‍टल, उमराली",
+      "total_beds": 160,
+      "available_beds": 155,
+      "isolation_beds": 155,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Alirajpur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        74.332392,
+        22.535824
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:14:58+05:30",
+      "name_english": "Eklavya Hostel Sejawada",
+      "name_hindi": "एकलव्य छात्रावास सेजवाड़ा",
+      "total_beds": 250,
+      "available_beds": 222,
+      "isolation_beds": 222,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Alirajpur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        74.357832,
+        22.318928
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:10:37+05:30",
+      "name_english": "BOYS Hostel, Alirajpur",
+      "name_hindi": "ब्वॉयज हॉस्टल, अलीराजपुर",
+      "total_beds": 160,
+      "available_beds": 72,
+      "isolation_beds": 72,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Alirajpur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        74.5480857,
+        22.4172574
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:11:36+05:30",
+      "name_english": "CCC JOBAT",
+      "name_hindi": "सीसीसी जोबट",
+      "total_beds": 100,
+      "available_beds": 40,
+      "isolation_beds": 40,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Alirajpur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T21:18:17+05:30",
+      "name_english": "CHC JAITHARI",
+      "name_hindi": "",
+      "total_beds": 10,
+      "available_beds": 1,
+      "isolation_beds": 0,
+      "oxygen_supported": 1,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Anuppur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        81.607195,
+        22.936309
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T21:19:08+05:30",
+      "name_english": "CHC RAJENDRAGRAM",
+      "name_hindi": "सीएचसी राजेंद्रग्राम",
+      "total_beds": 10,
+      "available_beds": 8,
+      "isolation_beds": 0,
+      "oxygen_supported": 8,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Anuppur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T21:18:45+05:30",
+      "name_english": "CHC KOTMA",
+      "name_hindi": "CHC KOTMA",
+      "total_beds": 10,
+      "available_beds": 3,
+      "isolation_beds": 0,
+      "oxygen_supported": 3,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Anuppur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        81.70173,
+        23.116543
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T21:19:27+05:30",
+      "name_english": "DH Anuppur - DCHC",
+      "name_hindi": "जिला चिकित्सालय, अनूपपुर - डीसीएचसी",
+      "total_beds": 80,
+      "available_beds": 23,
+      "isolation_beds": 23,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Anuppur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        81.720815,
+        23.107289
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T21:17:48+05:30",
+      "name_english": "GOVT KANYA SIKSHA PARISHAR ANUPPUR",
+      "name_hindi": "सरकारी कन्या शिक्षा परिसर अनूपपुर",
+      "total_beds": 100,
+      "available_beds": 44,
+      "isolation_beds": 14,
+      "oxygen_supported": 30,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Anuppur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.746596,
+        24.584311
+      ]
+    },
+    "properties": {
+      "type": "PRIVATE",
+      "last_updated": "2021-05-01T19:23:50+05:30",
+      "name_english": "AYUSHMAN NURSING HOME",
+      "name_hindi": "आयुष्मान नर्सिंग होम",
+      "total_beds": 5,
+      "available_beds": 5,
+      "isolation_beds": 5,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "PAID",
+      "rates_info_link": "https://sarthak.nhmmp.gov.in/covid_admin/uploads/rate_list/AYUSHMAN.jpg",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.746596,
+        24.584311
+      ]
+    },
+    "properties": {
+      "type": "PRIVATE",
+      "last_updated": "2021-05-01T20:46:52+05:30",
+      "name_english": "SAMAR HOSPITAL",
+      "name_hindi": "समर अस्पताल",
+      "total_beds": 6,
+      "available_beds": 6,
+      "isolation_beds": 6,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "PAID",
+      "rates_info_link": "https://sarthak.nhmmp.gov.in/covid_admin/uploads/rate_list/SAMAR.jpg",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        78.0914,
+        24.41261
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:26:04+05:30",
+      "name_english": "CHC ISAGARH",
+      "name_hindi": "सीएचसी ईसागढ़",
+      "total_beds": 4,
+      "available_beds": 4,
+      "isolation_beds": 4,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.746596,
+        24.584311
+      ]
+    },
+    "properties": {
+      "type": "PRIVATE",
+      "last_updated": "2021-05-01T20:30:49+05:30",
+      "name_english": "ASHOKA HOSPITAL",
+      "name_hindi": "अशोका अस्पताल",
+      "total_beds": 20,
+      "available_beds": 20,
+      "isolation_beds": 15,
+      "oxygen_supported": 5,
+      "reserved_icu_hdu": 0,
+      "access": "PAID",
+      "rates_info_link": "https://sarthak.nhmmp.gov.in/covid_admin/uploads/rate_list/ASHOKA.jpg",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.746596,
+        24.584311
+      ]
+    },
+    "properties": {
+      "type": "PRIVATE",
+      "last_updated": "2021-05-01T18:07:06+05:30",
+      "name_english": "ANANT HOSPITAL",
+      "name_hindi": "अनंत अस्पताल",
+      "total_beds": 54,
+      "available_beds": 54,
+      "isolation_beds": 54,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "PAID",
+      "rates_info_link": "https://sarthak.nhmmp.gov.in/covid_admin/uploads/rate_list/ANANT_HOSPITAL.jpg",
+      "district": "Jabalpur"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.746596,
+        24.584311
+      ]
+    },
+    "properties": {
+      "type": "PRIVATE",
+      "last_updated": "2021-05-01T18:56:31+05:30",
+      "name_english": "LKT HOSPITAL",
+      "name_hindi": "एलकेटी अस्पताल",
+      "total_beds": 30,
+      "available_beds": 26,
+      "isolation_beds": 18,
+      "oxygen_supported": 8,
+      "reserved_icu_hdu": 0,
+      "access": "PAID",
+      "rates_info_link": "https://sarthak.nhmmp.gov.in/covid_admin/uploads/rate_list/LKT_HOSPITAL.jpg",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.596076,
+        24.620963
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:16:59+05:30",
+      "name_english": "CHC SHADORA",
+      "name_hindi": "सीएचसी शाडोरा",
+      "total_beds": 8,
+      "available_beds": 7,
+      "isolation_beds": 5,
+      "oxygen_supported": 2,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.746596,
+        24.584311
+      ]
+    },
+    "properties": {
+      "type": "PRIVATE",
+      "last_updated": "2021-05-01T20:50:40+05:30",
+      "name_english": "ANANDPUR HOSPITAL",
+      "name_hindi": "आनंदपुर अस्पताल",
+      "total_beds": 50,
+      "available_beds": 44,
+      "isolation_beds": 44,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "PAID",
+      "rates_info_link": "https://sarthak.nhmmp.gov.in/covid_admin/uploads/rate_list/anandpur1.jpg",
+      "district": "Ashoknagar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        77.732702,
+        24.577129
+      ]
+    },
+    "properties": {
+      "type": "GOVERNMENT",
+      "last_updated": "2021-05-01T19:19:05+05:30",
+      "name_english": "DH Ashoknagar - DCHC",
+      "name_hindi": "जिला चिकित्सालय, अशोकनगर - डीसीएचसी",
+      "total_beds": 90,
+      "available_beds": 0,
+      "isolation_beds": 0,
+      "oxygen_supported": 0,
+      "reserved_icu_hdu": 0,
+      "access": "FREE",
+      "district": "Ashoknagar"
+    }
   }
 ]

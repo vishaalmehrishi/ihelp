@@ -1,4 +1,21 @@
 import React from 'react'
+const GOOGLE_API_KEY = require('../apiKeys')
+const GEOCODE_API = "https://maps.googleapis.com/maps/api/geocode/json?"
+
+const getCityFromCoordinates = (coordinates) => {
+    return new Promise((resolve, reject) => {
+        fetch(`${GEOCODE_API}latlng=${coordinates}&result_type=locality&key=${GOOGLE_API_KEY}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.status == "OK" && data.results.length > 0 && data.results[0].address_components.length > 0) {
+                resolve(data.results[0].address_components[0].long_name)
+            } else {
+                reject(data.status)
+            }
+        })
+        .catch(reject)
+    })
+}
 
 const usePermission = (permission) => {
     const [state, setState] = React.useState()
@@ -48,15 +65,4 @@ const useLocation = (enableHighAccuracy = true, timeout = 5000, maximumAge = 0) 
     return [coordinates, error]
 }
 
-const useLocationName = (coordinates) => {
-    if (!coordinates) {
-        return `N/A`
-    }
-
-    const trunc = (number, digits) => Number(number).toFixed(digits)
-
-    // TODO: Use Google Maps API to get readible name for coordinates
-    return `Searching near [${trunc(coordinates.latitude, 2)}:${trunc(coordinates.longitude, 2)}]`
-}
-
-export { usePermission, useLocation, useLocationName }
+export { usePermission, useLocation, getCityFromCoordinates }

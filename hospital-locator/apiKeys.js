@@ -1,3 +1,0 @@
-const GOOGLE_API_KEY = "PUT_YOUR_KEY_HERE"
-
-module.exports = GOOGLE_API_KEY
