@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
 function App() {
   var origin = '23.7248,75.9921'
   var destination = '23.7185370,76.0004910'

@@ -1,0 +1,14 @@
+type HOSPITAL @model {
+  id: ID!
+  name_english: String
+  name_hindi: String
+  total_beds: Int
+  available_beds: Int
+  isolation_beds: Int
+  oxygen_supported: Int
+  reserved_icu_hdu: Int
+  access: String
+  district: String
+  latitude: String
+  longitude: String
+}
