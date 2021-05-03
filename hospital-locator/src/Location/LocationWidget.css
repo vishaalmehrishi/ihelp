@@ -4,8 +4,8 @@
     align-items: center;
     flex-direction: row;
     max-width: 400px;
-    background-color: black;
-    color: white;
+    background-color: #aac5f7;
+    color: rgb(19, 19, 19);
     border-radius: 8px;
     padding: 0px 0.8em;
 }
@@ -16,6 +16,7 @@
     font-weight: bold;
     min-width: 160px;
     text-align: start;
+    color: black;
 }
 
 .location-widget-icon {
