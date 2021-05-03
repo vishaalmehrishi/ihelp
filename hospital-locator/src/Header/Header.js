@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import { LocationWidget } from "../Location/LocationWidget";
 import "../SearchBar/SearchBar";
-import { getNearByHospitalsFromLocation, useLocation} from "../Location/Location";
 function Header() {
     const renderHeader = () => {
         return (

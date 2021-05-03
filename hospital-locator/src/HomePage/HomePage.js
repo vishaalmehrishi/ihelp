@@ -4,6 +4,7 @@ import "../SearchBar/SearchBar";
 import { Header } from "../Header/Header";
 import { HospitalList } from "../HospitalList/HospitalList";
 import testData from "../__mocks__/testData.json";
+import {getNearByHospitalsFromLocation} from "../Location/Location";
 
 function HomePage() {
   return (
