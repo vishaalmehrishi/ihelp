@@ -91,7 +91,7 @@ const getNearByHospitalsFromLocation = (coordinates) => {
                 }
         })
         .catch(msg => {
-            console.log("getNearByHospitalsFromLocation exception ")
+            console.log("getNearByHospitalsFromLocation exception ", msg)
         })
     })
 }
