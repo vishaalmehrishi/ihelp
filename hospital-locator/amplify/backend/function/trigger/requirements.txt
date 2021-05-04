@@ -1,0 +1,8 @@
+boto3==1.17.62
+botocore==1.20.62
+jmespath==0.10.0
+python-dateutil==2.8.1
+s3transfer==0.4.2
+six==1.15.0
+-e git+https://github.com/utsav2601/ihelp.git@d94c8fecc818b60cd8cd866b005345451c3a15d3#egg=src&subdirectory=hospital-locator/amplify/backend/function/trigger/src
+urllib3==1.26.4
