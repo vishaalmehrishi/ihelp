@@ -7,11 +7,12 @@ import { HospitalList } from "../HospitalList/HospitalList";
 import testData from "../__mocks__/testData.json";
 import { getNearByHospitalsFromLocation } from "../Location/Location";
 
-function HomePage() {
+function HomePage({ lang = "en" }) {
   getNearByHospitalsFromLocation(`28.704060,77.102493`);
   return (
     <div className="homepage-root">
-      <Helmet>
+      {/* Set html head attributes, including lang which should be able to change for users */}
+      <Helmet htmlAttributes={{ lang }}>
         <meta charSet="utf-8" />
         <title>Covid Resources: Find the Nearest Hospital, Fast</title>
         <link rel="canonical" href="http://ihelp.app" />
