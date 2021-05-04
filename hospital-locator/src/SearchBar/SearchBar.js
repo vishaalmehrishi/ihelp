@@ -1,17 +1,29 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import cityList from "../__mocks__/cities.json";
+import locationDb from "location-database";
 
-const SearchBar = () => {
+const SearchBar = ({ updateSearchedCity }) => {
   const [searchCity, updateSearchCity] = useState("");
 
   const setSearchCity = (e) => {
     updateSearchCity(e.target.value);
   };
 
+  const handleCityClick = (e, city) => {
+    // console.log(city);
+    updateSearchedCity(city);
+    updateSearchCity("");
+  };
+
   const renderCity = (city, key) => {
     return (
-      <li key={key} className="cityText">
+      <li
+        key={key}
+        className="cityText"
+        onClick={(e) => {
+          handleCityClick(e, city);
+        }}
+      >
         {city.name}
       </li>
     );
@@ -22,8 +34,13 @@ const SearchBar = () => {
       }*/
   };
 
-  const filteredCities = cityList
-    .filter((city) => {
+  const filteredCities = locationDb
+    .getStatesByCode("IN")
+    .reduce((acc, state) => {
+      return acc.concat(state.cities);
+    }, [])
+    .filter((city, i) => {
+      // console.log(city);
       if (searchCity === "") {
         return "";
       } else if (city.name.toLowerCase().includes(searchCity.toLowerCase())) {
@@ -39,6 +56,7 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search city.. "
+          value={searchCity}
           onChange={setSearchCity}
         />
         <ul
