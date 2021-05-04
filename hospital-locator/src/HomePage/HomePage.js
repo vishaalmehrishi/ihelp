@@ -9,7 +9,7 @@ import testData from "../__mocks__/testData.json";
 import { getNearByHospitalsFromLocation } from "../Location/Location";
 
 function HomePage({ lang = "en" }) {
-  const [searchedCity, updateSearchedCity] = useState(undefined);
+  const [userCity, updateUserCity] = useState(undefined);
   getNearByHospitalsFromLocation(`28.704060,77.102493`);
   return (
     <div className="homepage-root">
@@ -20,8 +20,8 @@ function HomePage({ lang = "en" }) {
         <link rel="canonical" href="http://ihelp.app" />
       </Helmet>
       <Header />
-      <SearchBar updateSearchedCity={updateSearchedCity} />
-      <HospitalList hospitals={testData} searchedCity={searchedCity} />
+      <SearchBar updateUserCity={updateUserCity} />
+      <HospitalList hospitals={testData} userCity={userCity} />
     </div>
   );
 }

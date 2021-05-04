@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import "./SearchBar.css";
 import locationDb from "location-database";
 
-const SearchBar = ({ updateSearchedCity }) => {
-  const [searchCity, updateSearchCity] = useState("");
+const SearchBar = ({ updateUserCity }) => {
+  const [searchBarCity, updateSearchBarCity] = useState("");
 
-  const setSearchCity = (e) => {
-    updateSearchCity(e.target.value);
+  const setSearchBarCity = (e) => {
+    updateSearchBarCity(e.target.value);
   };
 
   const handleCityClick = (e, city) => {
     // console.log(city);
-    updateSearchedCity(city);
-    updateSearchCity("");
+    updateUserCity(city);
+    updateSearchBarCity("");
   };
 
   const renderCity = (city, key) => {
@@ -41,9 +41,11 @@ const SearchBar = ({ updateSearchedCity }) => {
     }, [])
     .filter((city, i) => {
       // console.log(city);
-      if (searchCity === "") {
+      if (searchBarCity === "") {
         return "";
-      } else if (city.name.toLowerCase().includes(searchCity.toLowerCase())) {
+      } else if (
+        city.name.toLowerCase().includes(searchBarCity.toLowerCase())
+      ) {
         return city;
       }
       return "";
@@ -56,12 +58,12 @@ const SearchBar = ({ updateSearchedCity }) => {
         <input
           type="text"
           placeholder="Search city.. "
-          value={searchCity}
-          onChange={setSearchCity}
+          value={searchBarCity}
+          onChange={setSearchBarCity}
         />
         <ul
           className={
-            searchCity === "" || filteredCities.length === 0
+            searchBarCity === "" || filteredCities.length === 0
               ? "cityList hideCityList"
               : "cityList"
           }
