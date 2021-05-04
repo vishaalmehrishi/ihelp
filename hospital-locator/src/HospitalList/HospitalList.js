@@ -5,19 +5,22 @@ import { RiPinDistanceLine } from "react-icons/ri";
 import { useLocation } from "../Location/Location";
 import straightDistanceInKm from "../utils/getDistance";
 
-const HospitalList = ({ hospitals, limit = 10 }) => {
+const HospitalList = ({ hospitals, userCity, limit = 10 }) => {
   // TODO: Faking hospital data to show list
   // Would probably be more performant to recieve sorted data from the backend?
   const [location] = useLocation();
   const [userLocation, setUserLocation] = useState();
 
   useEffect(() => {
-    if (!location) {
+    if (!location && !userCity) {
       console.log("Waiting for location");
+    } else if (userCity !== undefined) {
+      console.log(userCity);
+      setUserLocation(userCity);
     } else {
       setUserLocation(location);
     }
-  }, [location]);
+  }, [location, userCity]);
 
   const distanceInKm = (hospitalLat, hospitalLong, userLat, userLong) => {
     /* Calculate distance "as the crow flies" */
