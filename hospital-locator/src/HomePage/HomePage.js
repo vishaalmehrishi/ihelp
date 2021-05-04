@@ -9,7 +9,7 @@ import testData from "../__mocks__/testData.json";
 import { getNearByHospitalsFromLocation } from "../Location/Location";
 
 function HomePage({ lang = "en" }) {
-  const [searchedCity, updateSearchedCity] = useState({});
+  const [searchedCity, updateSearchedCity] = useState(undefined);
   getNearByHospitalsFromLocation(`28.704060,77.102493`);
   return (
     <div className="homepage-root">

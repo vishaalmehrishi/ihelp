@@ -14,7 +14,8 @@ const HospitalList = ({ hospitals, searchedCity, limit = 10 }) => {
   useEffect(() => {
     if (!location && !searchedCity) {
       console.log("Waiting for location");
-    } else if (searchedCity) {
+    } else if (searchedCity !== undefined) {
+      console.log(searchedCity);
       setUserLocation(searchedCity);
     } else {
       setUserLocation(location);
