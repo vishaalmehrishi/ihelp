@@ -2,9 +2,9 @@
 A web application to help people locate COVID related help as fast as possible.
 
 ## Table of Contents  
-[Headers](##teckStack)  
-[File Structure](#fileStructure)
-[Contributing to the Project](#contributing)
+* [Headers](##teckStack)
+* [File Structure](#fileStructure)
+* [Contributing to the Project](#contributing)
 
 ## Current Tech Stack
 * Frontend: React
