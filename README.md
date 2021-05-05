@@ -2,7 +2,7 @@
 A web application to help people locate COVID related help as fast as possible.
 
 ## Table of Contents  
-* [Headers](#current-tech-stack)
+* [Current Tech Stack](#current-tech-stack)
 * [File Structure](#file-structure)
 * [Contributing to the Project](#contributing-to-the-project)
 
