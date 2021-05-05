@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import SearchBar from "../SearchBar/SearchBar";
 import "./HomePage.css";
@@ -8,6 +9,7 @@ import testData from "../__mocks__/testData.json";
 import { getNearByHospitalsFromLocation } from "../Location/Location";
 
 function HomePage({ lang = "en" }) {
+  const [gpsUserLocation, updateGPSUserLocation] = useState();
   getNearByHospitalsFromLocation(`28.704060,77.102493`);
   return (
     <div className="homepage-root">
@@ -17,9 +19,9 @@ function HomePage({ lang = "en" }) {
         <title>Covid Resources: Find the Nearest Hospital, Fast</title>
         <link rel="canonical" href="http://ihelp.app" />
       </Helmet>
-      <Header />
+      <Header updateGPSUserLocation={updateGPSUserLocation} />
       <SearchBar />
-      <HospitalList hospitals={testData} />
+      <HospitalList hospitals={testData} gpsUserLocation={gpsUserLocation} />
     </div>
   );
 }

@@ -2,22 +2,20 @@ import { useEffect, useState } from "react";
 import "./HospitalList.css";
 import { FaBed } from "react-icons/fa";
 import { RiPinDistanceLine } from "react-icons/ri";
-import { useLocation } from "../Location/Location";
 import straightDistanceInKm from "../utils/getDistance";
 
-const HospitalList = ({ hospitals, limit = 10 }) => {
+const HospitalList = ({ hospitals, limit = 10, gpsUserLocation }) => {
   // TODO: Faking hospital data to show list
   // Would probably be more performant to recieve sorted data from the backend?
-  const [location] = useLocation();
   const [userLocation, setUserLocation] = useState();
 
   useEffect(() => {
-    if (!location) {
+    if (!gpsUserLocation) {
       console.log("Waiting for location");
     } else {
-      setUserLocation(location);
+      setUserLocation(gpsUserLocation);
     }
-  }, [location]);
+  }, [gpsUserLocation]);
 
   const distanceInKm = (hospitalLat, hospitalLong, userLat, userLong) => {
     /* Calculate distance "as the crow flies" */
