@@ -41,10 +41,10 @@ Thanks for helping out! Here are some tips to get started:
 * Fork this repo and submit PRs
 * If you have trouble getting the app to start, make sure that you have `cd`ed into the `hospital-locator` folder. If you still have trouble, try deleting `package-lock.json` and/or checking that you are using Node v14 or above
 * We want to keep track of tasks. Use the tasks channel in the Discord server:
-`-task list`: List all current tasks
-`-task help`: Get help with the task command
-`-task add dev "my task"`: Add a task to the task list
-`-task done task-id`: Mark a task as done in the task list
+ * `-task list`: List all current tasks
+ * `-task help`: Get help with the task command
+ * `-task add dev "my task"`: Add a task to the task list
+ * `-task done task-id`: Mark a task as done in the task list
 
 ### Google Maps API
 
