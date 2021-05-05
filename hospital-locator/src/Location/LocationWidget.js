@@ -28,7 +28,11 @@ const useLoadingText = () => {
   return text + ".".repeat(counter % 3);
 };
 
-const LocationWidget = ({ updateGPSUserLocation }) => {
+const LocationWidget = ({
+  updateGPSUserLocation,
+  updateChosenUserCity,
+  chosenUserCity
+}) => {
   const [locationAccess] = usePermission("geolocation");
   // Only update location every 5 minutes
   const [location, locationError] = useLocation(true, 300000, 300000);
@@ -39,11 +43,17 @@ const LocationWidget = ({ updateGPSUserLocation }) => {
     if (!location) {
       return;
     }
-    getCityFromCoordinates(
-      `${location.latitude},${location.longitude}`
-    ).then((newCityName) => setCityName(`Searching near ${newCityName}`));
-    updateGPSUserLocation(location);
-  }, [location, updateGPSUserLocation]);
+    // If the user has chosen a city from search, use that
+    if (chosenUserCity !== undefined) {
+      setCityName(`Searching near ${chosenUserCity.name}`);
+    } else {
+      // Else use gps user location
+      getCityFromCoordinates(
+        `${location.latitude},${location.longitude}`
+      ).then((newCityName) => setCityName(`Searching near ${newCityName}`));
+      updateGPSUserLocation(location);
+    }
+  }, [location, chosenUserCity, updateGPSUserLocation]);
 
   const locationFailed = () => locationAccess === "denined" || locationError;
 
@@ -59,6 +69,7 @@ const LocationWidget = ({ updateGPSUserLocation }) => {
     // TODO: We may want to reload location in-place, rather than reloading the entire page.
     // Due to permissions behavior being different on select browsers, this was not straightforward.
     // For now, we will just reload the page which will request the user permission again.
+    updateChosenUserCity(undefined);
     window.location.reload();
   };
 

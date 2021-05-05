@@ -92,13 +92,12 @@ const getNearByHospitalsFromLocation = (coordinates) => {
     const api = `${PLACES_API}location=${coordinates}&radius=${PLACES_RADIUS}&type=hospital&key=${GOOGLE_API_KEY}`;
     console.log(api);
     fetch(api, {
-      mode: "no-cors",
       headers: {
         "content-type": "application/json"
       }
     })
       .then((res) => {
-        //console.log(res)
+        console.log(res);
         return res.json();
       })
       .then((res) => {
