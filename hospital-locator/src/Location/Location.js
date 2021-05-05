@@ -60,7 +60,7 @@ const useLocation = (
 ) => {
   const [coordinates, setCoordinates] = React.useState();
   const [error, setError] = React.useState();
-  console.log("useLocation timeout", timeout);
+  // console.log("useLocation timeout", timeout);
 
   React.useEffect(() => {
     const id = navigator.geolocation.watchPosition(
@@ -92,6 +92,7 @@ const getNearByHospitalsFromLocation = (coordinates) => {
     const api = `${PLACES_API}location=${coordinates}&radius=${PLACES_RADIUS}&type=hospital&key=${GOOGLE_API_KEY}`;
     console.log(api);
     fetch(api, {
+      mode: "no-cors",
       headers: {
         "content-type": "application/json"
       }
