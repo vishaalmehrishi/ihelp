@@ -1,17 +1,29 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import cityList from "../__mocks__/cities.json";
+import locationDb from "location-database";
 
-const SearchBar = () => {
-  const [searchCity, updateSearchCity] = useState("");
+const SearchBar = ({ updateUserCity }) => {
+  const [searchBarCity, updateSearchBarCity] = useState("");
 
-  const setSearchCity = (e) => {
-    updateSearchCity(e.target.value);
+  const setSearchBarCity = (e) => {
+    updateSearchBarCity(e.target.value);
+  };
+
+  const handleCityClick = (e, city) => {
+    // console.log(city);
+    updateUserCity(city);
+    updateSearchBarCity("");
   };
 
   const renderCity = (city, key) => {
     return (
-      <li key={key} className="cityText">
+      <li
+        key={key}
+        className="cityText"
+        onClick={(e) => {
+          handleCityClick(e, city);
+        }}
+      >
         {city.name}
       </li>
     );
@@ -22,11 +34,18 @@ const SearchBar = () => {
       }*/
   };
 
-  const filteredCities = cityList
-    .filter((city) => {
-      if (searchCity === "") {
+  const filteredCities = locationDb
+    .getStatesByCode("IN")
+    .reduce((acc, state) => {
+      return acc.concat(state.cities);
+    }, [])
+    .filter((city, i) => {
+      // console.log(city);
+      if (searchBarCity === "") {
         return "";
-      } else if (city.name.toLowerCase().includes(searchCity.toLowerCase())) {
+      } else if (
+        city.name.toLowerCase().includes(searchBarCity.toLowerCase())
+      ) {
         return city;
       }
       return "";
@@ -39,11 +58,12 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search city.. "
-          onChange={setSearchCity}
+          value={searchBarCity}
+          onChange={setSearchBarCity}
         />
         <ul
           className={
-            searchCity === "" || filteredCities.length === 0
+            searchBarCity === "" || filteredCities.length === 0
               ? "cityList hideCityList"
               : "cityList"
           }
