@@ -1,4 +1,4 @@
-const GOOGLE_API_KEY = require("./apiKeys");
+const GOOGLE_API_KEY = require('../src/apiKeys');
 const axios = require("axios");
 
 const API = "https://maps.googleapis.com/maps/api/directions/json?";

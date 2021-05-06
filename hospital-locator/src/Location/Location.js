@@ -84,15 +84,15 @@ const getNearByHospitalsFromLocation = (coordinates) => {
             return res.json()
          }).then (res => { 
                 if (res.status == "OK") {
-                    console.log(res.results)
+                    console.log(res.json.results)
                     resolve(res.results)
                 } else {
                     reject("getNearByHospitalsFromLocation failed")
                 }
-        })
-        .catch(msg => {
-            console.log("getNearByHospitalsFromLocation exception ", msg)
-        })
+        }).catch(reject)
+        
+    }).catch(msg => {
+        console.log("getNearByHospitalsFromLocation exception ", msg)
     })
 }
 
