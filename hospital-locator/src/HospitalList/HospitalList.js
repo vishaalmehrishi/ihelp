@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./HospitalList.css";
-import { FaBed } from "react-icons/fa";
+import { FaBed, FaPhone, FaChevronRight } from "react-icons/fa";
 import { RiPinDistanceLine } from "react-icons/ri";
 import straightDistanceInKm from "../utils/getDistance";
 
@@ -87,7 +88,7 @@ const renderHospitalDistance = (hospital, distance) => {
     <div className="hospitalDistance">
       <RiPinDistanceLine
         className="hospitalDistanceIcon"
-        aria-labelledby="Distance to hospital"
+        aria-labelledby="Distance to hospital in KM"
       />
       <p key={`${hospital.properties.name_english}-distance`}>{distance}</p>
     </div>
@@ -98,25 +99,47 @@ const HospitalListItem = ({ hospital, distanceInKm }) => {
   /* From data scrape, expect hospital to contain
     name, lat, lon, type, total_beds, available_beds, rates_info,
   */
+  const makeHospitalUrl = (hospitalName) => {
+    return hospitalName.toLowerCase().split(" ").join("_");
+  };
 
   return (
-    <li className="hospitalListItem">
-      <div className="hospitalInfo">
-        {/* TODO: Update on language change? */}
-        <h2>{hospital.properties.name_english}</h2>
-        <p>{hospital.properties.district}</p>
-      </div>
+    <Link
+      to={{
+        pathname: `/hospital/${makeHospitalUrl(
+          hospital.properties.name_english
+        )}`,
+        state: { hospital: hospital }
+      }}
+      className="hospitalListItemLink"
+    >
+      <li className="hospitalListItem">
+        <div className="hospitalInfo">
+          {/* TODO: Update on language change? */}
+          <h2 className="hospitalName">
+            {hospital.properties.name_english}{" "}
+            <FaChevronRight aria-hidden="true" />
+          </h2>
+          <p>
+            <FaPhone
+              className="hospitalPhoneIcon"
+              aria-labelledby="Hospital Phone Number"
+            />{" "}
+            {hospital.properties.phone}
+          </p>
+        </div>
 
-      {renderHospitalDistance(hospital, distanceInKm)}
+        {renderHospitalDistance(hospital, distanceInKm)}
 
-      <div className="hospitalBeds">
-        <FaBed
-          className="hospitalBedIcon"
-          aria-labelledby="Number of available hospital beds"
-        />
-        <p>{hospital.properties["available_beds"]}</p>
-      </div>
-    </li>
+        <div className="hospitalBeds">
+          <FaBed
+            className="hospitalBedIcon"
+            aria-labelledby="Number of available hospital beds"
+          />
+          <p>{hospital.properties["available_beds"]}</p>
+        </div>
+      </li>
+    </Link>
   );
 };
 
