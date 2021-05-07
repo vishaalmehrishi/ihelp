@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./HospitalList.css";
-import { FaBed, FaPhone } from "react-icons/fa";
+import { FaBed, FaPhone, FaChevronRight } from "react-icons/fa";
 import { RiPinDistanceLine } from "react-icons/ri";
 import straightDistanceInKm from "../utils/getDistance";
 
@@ -116,7 +116,10 @@ const HospitalListItem = ({ hospital, distanceInKm }) => {
       <li className="hospitalListItem">
         <div className="hospitalInfo">
           {/* TODO: Update on language change? */}
-          <h2>{hospital.properties.name_english}</h2>
+          <h2 className="hospitalName">
+            {hospital.properties.name_english}{" "}
+            <FaChevronRight aria-hidden="true" />
+          </h2>
           <p>
             <FaPhone
               className="hospitalPhoneIcon"

@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import { FaBed, FaPhone } from "react-icons/fa";
+import { FaBed, FaPhone, FaChevronLeft } from "react-icons/fa";
 import { RiPinDistanceLine } from "react-icons/ri";
 import "./HospitalFullInfo.css";
 
@@ -12,7 +12,7 @@ const HospitalFullInfo = () => {
   return (
     <div className="hospitalFullInfo">
       <Link to="/" className="backLink">
-        Go back
+        <FaChevronLeft aria-hidden="true" /> Go back
       </Link>
       <h2>{hospital.properties.name_english}</h2>
       <p

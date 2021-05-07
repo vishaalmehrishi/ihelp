@@ -20,6 +20,11 @@
   padding: 1rem;
 }
 
+.hospitalName {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hospitalInfo {
   text-align: left;
   width: 100%;
