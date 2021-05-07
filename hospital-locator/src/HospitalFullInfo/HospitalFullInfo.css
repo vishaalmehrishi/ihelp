@@ -1,0 +1,35 @@
+.hospitalFullInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.backLink {
+  background-color: #6c757d;
+  color: #FFF;
+  margin: 0 auto;
+  padding: 1rem;
+  text-decoration: none;
+  width: 70%;
+}
+
+.access-badge {
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: bold;
+  padding: 0.5rem;
+
+}
+
+.access-free {
+  background-color: #28a745;
+}
+
+.access-paid {
+  background-color: #343a40;
+}

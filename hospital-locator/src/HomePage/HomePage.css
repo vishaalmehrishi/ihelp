@@ -1,12 +1,5 @@
 .homepage-root {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2em;
-    max-width: 1000px;
-    margin: 0 auto;
+
   }
 
   .homepage-text {
