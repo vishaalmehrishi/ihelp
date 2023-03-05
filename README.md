@@ -49,7 +49,13 @@ Thanks for helping out! Here are some tips to get started:
 ### Google Maps API
 
 * This project uses the Google Maps API
-* You will need to put your Google Maps API Key in `apiKeys.js`
+* You will need to [create a Google project and an API key with the Maps API](https://developers.google.com/maps/documentation/places/web-service/get-api-key) for local testing
+* Create a `.env` file in the hospital-locator folder on your local machine and fill in the Google API key
+```
+REACT_APP_GOOGLE_API_KEY=YOUR_API_KEY_FOR_TESTING
+```
+* Be sure to restart your server!
+* `.env` is in the git ignore file so you don't accidentally commit it. Never commit `.env`!
 
 ### More about Amplify
 Some more useful details about Amplify:

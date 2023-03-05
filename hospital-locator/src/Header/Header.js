@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import { LocationWidget } from "../Location/LocationWidget";
-import "../SearchBar/SearchBar";
 function Header({
   updateGPSUserLocation,
   updateChosenUserCity,

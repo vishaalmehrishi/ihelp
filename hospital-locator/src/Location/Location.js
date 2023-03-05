@@ -1,6 +1,6 @@
 import React from "react";
-import { RiContactsBookLine } from "react-icons/ri";
-const GOOGLE_API_KEY = require("../apiKeys");
+
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 const GEOCODE_API = "https://maps.googleapis.com/maps/api/geocode/json?";
 const PLACES_API =
   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
@@ -98,20 +98,20 @@ const getNearByHospitalsFromLocation = (coordinates) => {
       }
     })
       .then((res) => {
-        console.log(res);
+        //console.log(res)
         return res.json();
       })
       .then((res) => {
         if (res.status == "OK") {
-          console.log(res.results);
+          console.log(res.json.results);
           resolve(res.results);
         } else {
           reject("getNearByHospitalsFromLocation failed");
         }
       })
-      .catch((msg) => {
-        console.log("getNearByHospitalsFromLocation exception ", msg);
-      });
+      .catch(reject);
+  }).catch((msg) => {
+    console.log("getNearByHospitalsFromLocation exception ", msg);
   });
 };
 

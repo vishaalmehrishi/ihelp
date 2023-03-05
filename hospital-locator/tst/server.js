@@ -1,7 +1,12 @@
 var express = require('express')
 var cors = require('cors')
 var morgan = require('morgan')
+
 var getDistance = require('./mapRequest')
+var tstLocation = require('./tstLocation')
+
+
+
 
 var app = express()
 var port = 3001
@@ -12,6 +17,12 @@ app.use(morgan('combined'))
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
+
+app.get('/testLocation', (req,res) => {
+  tstLocation()
+})
+
+
 
 app.get('/maps/:origin/:destination', (req, res) => {
     getDistance(req.params.origin, req.params.destination)
